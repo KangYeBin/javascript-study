@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    /*
+      점수를 입력받아서, 
+      점수가 90점 이상인 사람은 다시 한 번 조건을 검사해서
+      95점 이상인 사람은 A+, 95점 미만이라면 A0라고 얘기해 주세요.
+      80점대는 B,
+      70점대는 C,
+      60점대는 D,
+      나머지는 모두 F 처리하세요.
+      출력은 alert 함수를 이용해서 출력하세요.
+    */
+
+    var score = +prompt('점수를 입력하세요');
+
+    if (score >= 90) {
+      if (score >= 95) {
+        alert('학점 : A+');
+      } else {
+        alert('학점 : A0');
+      }
+    } else if (score >= 80) {
+      alert('학점 : B');
+    } else if (score >= 70) {
+      alert('학점 : C');
+    } else if (score >= 60) {
+      alert('학점 : D');
+    } else {
+      alert('학점 : F');
+    }
+  </script>
+
+</body>
+
+</html>
