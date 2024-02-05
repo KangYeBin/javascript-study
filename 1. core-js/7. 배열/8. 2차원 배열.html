@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // 우리반 학생들 4과목 점수 (국영수탐)
+    // var kim = [67, 89, 92, 32];
+    // var lee = [100, 87, 55, 67];
+    // var park = [23, 44, 100, 22];
+
+    var ourStudentScore = [
+      [67, 89, 92, 32],
+      [100, 87, 55, 67],
+      [23, 44, 100, 22]
+    ];
+    console.log(ourStudentScore);
+    console.log(ourStudentScore[1]); // array
+    console.log(ourStudentScore[0][2]); // 더블 인덱싱
+
+
+    // 반 평균 구하기
+    // 한 학생의 평균의 총합을 저장할 변수
+    var ourAverage = 0;
+
+    for (var studentScore of ourStudentScore) {
+      // studentScore 변수에는 한 학생의 점수 배열이 전달됨
+      var eachTotal = 0; // 한 학생의 4과목 총점
+
+      for (var score of studentScore) {
+        eachTotal += score;
+      }
+      // 한 학생의 평균 점수
+      var eachAverage = eachTotal / studentScore.length;
+      ourAverage += eachAverage;
+    }
+    var classAverage = ourAverage / ourStudentScore.length;
+    console.log(`우리반 평균 : ${Math.round(classAverage*100)/100}점`);
+  </script>
+
+</body>
+
+</html>

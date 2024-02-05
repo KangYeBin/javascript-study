@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    var week = ['월', '화', '수', '목', '금', '토', '일'];
+
+    // for (i = 0; i < week.length; i++) {
+    //   console.log(week[i] + '요일');
+    // }
+
+    // 배열 내부를 전체 순회하여 요소를 하나씩 가져오는 반복문, 시작과 끝이 고정
+    // for (배열 요소 받을 변수 of 배열 이름) {} index 사용 X
+    for (var day of week) { 
+      console.log(day + '요일');
+    }
+
+    console.log('===================');
+
+    // for-in은 배열이나 객체의 index 혹인 key 값을 변수에 저장
+    // for (배열 index 받을 변수 in 배열 이름) {}
+    for (var day in week) {
+      console.log(day + '요일');
+    }
+  </script>
+
+</body>
+
+</html>
