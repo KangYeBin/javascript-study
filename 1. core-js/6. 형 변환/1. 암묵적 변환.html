@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    var ex = 10 + '20';
+    console.log('ex : ' + ex); // 20을 문자열로 받아서 1020 출력
+
+    var ex2 = 10 * '3';
+    console.log('ex2 : ' + ex2); // 문자열을 곱할 수 없으므로 숫자 3으로 변환하여 30 출력
+
+    var ex2 = 100 + '';
+    console.log('ex2 : ' + typeof ex2); // string 출력
+
+    // 문자열 타입의 암묵적 숫자 변환
+    var ex3 = +'550'; // 550, number 타입
+
+    ex3 = +'false'; // NaN, number 타입
+
+    // 논리 타입을 암묵적 숫자 변환
+    ex3 = +true;  // 1, number 타입
+    ex3 = +false; // 0, number 타입
+
+    ex3 = +null;  // 0, number 타입
+
+    ex3 = +NaN;   // NaN, number 타입
+
+    console.log('ex3 : ' + ex3 + ', ' + typeof ex3);
+
+    console.log('===========================');
+
+    // undefined, null, 0, NaN, ''(빈 문자열)은 모두 false
+    // 나머지는 모두 true로 인식
+
+    // 함수가 반환하는 값, 비동기 통신의 결과값들이 정확하게 어떤 값인지 모르더라도
+    // 해당 값이 띠고 있는 논리적 평가에 따라 조건문을 수월하게 구성 가능
+
+    // Truthy, Falsy
+    if('') console.log('OK1');        // false
+    if('hello') console.log('OK2');   // true
+    if(undefined) console.log('OK3'); // false
+    if(null) console.log('OK4');      // false
+    if(350) console.log('OK5');       // true
+    if(NaN) console.log('OK6');       // false
+    if(0) console.log('OK7');         // false
+    if([1,2,3]) console.log('OK8');   // true
+
+    if (ex3 && ex4) {}  // 자바스크립트에서는
+    if (ex3 !==null && ex4!==null) {} //자바에서는
+
+  </script>
+
+</body>
+
+</html>
