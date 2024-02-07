@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+ <html lang="ko">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+
+ <body>
+
+     <script>
+         /*
+            1. 변수 중복 선언 불가능
+        */
+         let x = 100;
+         //  let x = 200;   // 식별자 x는 이미 선언되어있으므로 X
+
+
+         /*
+             2. 블록 레벨 스코프를 인정
+         */
+         if (true) {
+             let y = 100;
+             console.log('if문 내부 : ' + y); // 100 출력
+         }
+         //  console.log('if문 외부 : ' + y);   // 지역 변수 참조 X
+         //  함수뿐만 아니라 모든 블록{} 영역이 인정됨
+
+
+         /*
+             3. 변수 호이스팅이 발생하지 않음
+         */
+         z = 10;    // 식별자 선언 후 할당해야한다
+         console.log(z);
+
+         let z;
+     </script>
+
+ </body>
+
+ </html>

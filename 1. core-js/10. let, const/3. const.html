@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const x = '메롱';
+        console.log(x);
+        // x = '안 메롱';   error
+        // const로 선언한 값은 상수로 취급해서 값의 변경이 불가능
+
+
+        // const와 객체 (객체, 배열, 함수)
+        const person = {
+            name: 'park',
+            age: 20
+        };
+
+        // person의 주소값 자체는 변하지 않으므로
+        // 객체 내의 프로퍼티 값 변경은 가능
+        person.name = 'kim';
+        console.log(person.name);
+
+        // 안되는 코드 (객체 자체를 변경하는 행위)
+        person = {
+            name: 'lee',
+            age: 30
+        }               // error
+    </script>
+
+</body>
+
+</html>
