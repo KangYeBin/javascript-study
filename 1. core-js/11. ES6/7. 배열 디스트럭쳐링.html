@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <script>
+
+      const userNames = ['김철수', '홍길동', '박영희'];
+      // const kim = userNames[0];
+      // const hong = userNames[1];
+      // const park = userNames[2];
+
+
+      /*
+      구조 분해 할당 (destructuring)
+      : 객체나 배열을 다시 기본데이터로 해체하는 것
+      */
+      const [kim, hong, park] = userNames;
+
+      // const [kk, hh] = userNames;      // 순서대로 두 개 해체
+      // console.log(`kk : ${kk}, hh : ${hh}`);
+
+      const [kk, , pp] = userNames;       // 비는 곳은 비워두기
+      console.log(`kk : ${kk}, pp : ${pp}`);
+
+
+
+      // 변수값 교환하기
+      let first = 10;
+      let second = 20;
+
+      [second, first] = [first, second];
+      console.log(`1st : ${first}, 2nd : ${second}`);
+
+
+
+      // [1, 3, 5, 7, 9, 11]
+      // 맨 앞 2개는 각각의 변수에 저장하고
+      // 나머지는 묶어서 새로운 배열로 받는다
+      const [one, three, ...rest] = [1, 3, 5, 7, 9, 11];
+      console.log(`one : ${one}, three : ${three}, rest : ${rest}`);
+
+
+
+      // spread를 활용한 배열의 간편 복사
+      console.log('=========================================');
+
+      const foods = ['감자튀김', '햄버거', '콜라'];
+      // const copyFoods = foods // 배열의 주소값(포인터)을 복사한 것이므로
+      // copyFoods를 변경하면 foods의 내용도 변경된다
+      
+
+      const copyFoods = ['치킨너겟', ...foods, '닭강정'];
+      copyFoods[2] = '치킨버거';
+      copyFoods[3] = '사이다';
+
+      console.log(`copy : ${copyFoods}`);
+      console.log(`origin : ${foods}`);
+   </script>
+
+</body>
+
+</html>

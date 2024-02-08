@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+
+   <script>
+
+      const emp = {
+         empName : '뽀로로',
+         age : 4,
+         hireDate : '2021-01-01',
+         birthDay : '2020-02-08'
+      };
+
+      const {empName, birthDay, age} = emp;
+      console.log(`내 이름은 ${empName}이고, 나이는 ${age}살이고, 생일은 ${birthDay} 입니다`);
+
+
+      // 변수의 이름을 바꾸고 싶을 때
+      const {empName:en, birthDay:bd, age:a} = emp;
+      console.log(`내 이름은 ${en}이고, 나이는 ${a}살이고, 생일은 ${bd} 입니다`);
+
+      console.log('============================================================');
+
+      // spread로 나머지 요소 가져오기
+      const {birthDay: bDay, ...others} = emp;
+      console.log(others);
+
+
+      console.log('============================================================');
+      
+      // spread로 객체 안전하게 복사
+      const copyEmp = {
+         ...emp,
+         address: '마포구',
+         hobbies: ['산책', '수영'],
+         age : 17
+      };
+      console.log(emp);
+      console.log(copyEmp);
+   </script>
+   
+</body>
+</html>
