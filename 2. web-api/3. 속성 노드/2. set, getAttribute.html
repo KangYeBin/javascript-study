@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <input type="text" id="name" value="kim" class="user-name">
+   <p id="text">Hello</p>
+
+   <script>
+      const $input = document.querySelector('input[type=text]');
+
+      // input의 value라는 속성의 값을 알고 싶다면
+      // const inputValue = $input.attributes.value.value;
+      const inputValue = $input.getAttribute('value')
+      console.log(inputValue);
+
+
+      // value 속성의 값을 변경
+      // $input.attributes.value.value = '메롱';
+      $input.setAttribute('value', '안녕하세요');
+
+
+      // p 태그에 title 속성을 추가
+      const $paragraph = document.getElementById('text');
+      $paragraph.setAttribute('title', '메롱');
+
+
+      // 속성의 존재 유무
+      console.log($input.hasAttribute('class'));
+      console.log($paragraph.hasAttribute('class'));
+
+      if ($input.hasAttribute('class')) {
+         $input.removeAttribute('class');
+      } else {
+         $input.setAttribute('class', 'user-name');
+      }
+   </script>
+
+
+</body>
+
+</html>
